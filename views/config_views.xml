@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <data>
+
+    <record id="hr_delegation_config_tree_view" model="ir.ui.view">
+      <field name="name">HR Delegation Config tree view</field>
+      <field name="model">hr_delegation.config</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+  </data>
+</odoo>

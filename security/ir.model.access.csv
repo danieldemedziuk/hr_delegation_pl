@@ -1,3 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_hr_delegation_officer,hr_delegation officer,model_hr_delegation,hr.group_hr_user,1,1,1,1
+access_hr_delegation_config_officer,hr_delegation.config officer,model_hr_delegation_config,hr.group_hr_user,1,1,1,1
+access_hr_delegation_international_rates_officer,hr_delegation.international_rates officer,model_hr_delegation_international_rates,hr.group_hr_user,1,1,1,1
+
 access_hr_delegation_user,hr_delegation user,model_hr_delegation,base.group_user,1,1,1,0
