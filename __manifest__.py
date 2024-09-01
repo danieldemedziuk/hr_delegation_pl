@@ -18,17 +18,14 @@ Polish business delegations of your company's employees.
         'base',
     ],
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/ir.model.access.csv',
+        'data/config_data.xml',
+        'views/hr_delegation_views.xml',
+        'views/config_views.xml',
     ],
 
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
     'license': 'LGPL-3',
     'installable': True,
     'auto_install': False,
-    'application': False,
+    'application': True,
 }

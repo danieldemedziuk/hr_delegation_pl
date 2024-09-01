@@ -1,60 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="hr_delegation.list">
-      <field name="name">hr_delegation list</field>
-      <field name="model">hr_delegation.hr_delegation</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
--->
 
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="hr_delegation.action_window">
-      <field name="name">hr_delegation window</field>
-      <field name="res_model">hr_delegation.hr_delegation</field>
-      <field name="view_mode">tree,form</field>
+    <record id="hr_delegation_pl_tree_view" model="ir.ui.view">
+        <field name="name">HR Delegation PL Tree view</field>
+        <field name="model">hr_delegation_pl</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="project_id"/>
+                <field name="employee_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
     </record>
--->
 
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="hr_delegation.action_server">
-      <field name="name">hr_delegation server</field>
-      <field name="model_id" ref="model_hr_delegation_hr_delegation"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
+    <record id="hr_delegation_pl_form_view" model="ir.ui.view">
+        <field name="name">HR Delegation PL Form view</field>
+        <field name="model">hr_delegation_pl</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <label for="name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="date_start"/>
+                            <field name="date_start"/>
+                        </group>
+                        <group>
+                            <field name="project_id"/>
+                            <field name="employee_id"/>
+                        </group>
+                    </group>
+                    <field name="note"/>
+                </sheet>
+            </form>
+        </field>
     </record>
--->
 
-    <!-- Top menu item -->
-<!--
-    <menuitem name="hr_delegation" id="hr_delegation.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="hr_delegation.menu_1" parent="hr_delegation.menu_root"/>
-    <menuitem name="Menu 2" id="hr_delegation.menu_2" parent="hr_delegation.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="hr_delegation.menu_1_list" parent="hr_delegation.menu_1"
-              action="hr_delegation.action_window"/>
-    <menuitem name="Server to list" id="hr_delegation" parent="hr_delegation.menu_2"
-              action="hr_delegation.action_server"/>
--->
-  </data>
+    <record id="action_hr_delegation_tree_view" model="ir.actions.act_window">
+        <field name="name">Delegation</field>
+        <field name="res_model">hr_delegation_pl</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_root" name="Delegation" sequence="1"/>
+    <menuitem id="menu_delegation_root" name="Delegation" action='action_hr_delegation_tree_view' parent='menu_root' sequence="5"/>
+
 </odoo>
