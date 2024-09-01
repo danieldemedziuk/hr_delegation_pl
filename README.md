@@ -1,5 +1,5 @@
 
-# HR Delegation - Poland
+# HR Delegation - PL
 
 ## Overview
 
@@ -17,16 +17,16 @@ The **HR Delegation** module is designed for companies operating in Poland to ef
 ## Installation
 
 1. Ensure you are running **Odoo 17**.
-2. Clone the repository to your Odoo `addons` directory:
+2. Clone the repository to your Odoo `custom_addons` directory:
 
    ```bash
-   git clone https://github.com/yourusername/hr_delegation_poland.git
+   git clone https://github.com/danieldemedziuk/hr_delegation_pl.git
    ```
 
 3. Restart your Odoo server to load the new module:
 
    ```bash
-   ./odoo-bin -c /etc/odoo/odoo.conf -d yourdatabase -u hr_delegation_poland
+   ./odoo-bin -c /etc/odoo/odoo.conf -d yourdatabase -u hr_delegation_pl
    ```
 
 4. Go to the Apps menu in Odoo and install the HR Delegation module.
@@ -47,7 +47,7 @@ The **HR Delegation** module is designed for companies operating in Poland to ef
 ## Legal Compliance
 
 This module adheres to the following Polish regulations:
-- **Rozporządzenie Ministra Pracy i Polityki Społecznej** z dnia 29 stycznia 2013 r. w sprawie należności przysługujących pracownikowi zatrudnionemu w państwowej lub samorządowej jednostce sfery budżetowej z tytułu podróży służbowej.
+- **Ordinance of the Minister of Labor and Social Policy** of January 29, 2013 on dues payable to an employee employed in a state or local government unit of the budgetary sphere for business travel.
 - Regular updates to ensure compliance with any amendments to Polish law concerning business trip settlements.
 
 ## Support
