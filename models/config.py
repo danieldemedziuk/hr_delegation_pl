@@ -29,4 +29,5 @@ class InternationRates(models.Model):
     config_id = fields.Many2one('hr_delegation_pl.config')
     base_currency_id = fields.Many2one('res.currency', related='config_id.base_currency_id')
     diet_value = fields.Monetary(string='Value', currency_field='base_currency_id')
+    night_limit = fields.Monetary(string='Limit per night', currency_field='base_currency_id')
 

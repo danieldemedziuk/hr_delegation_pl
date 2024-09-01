@@ -40,12 +40,14 @@
 
                     <label for="international_rate_ids" string="International rates"/>
                     <field name="international_rate_ids">
-                        <tree editable="bottom">
+                        <tree editable="bottom" limit="80">
                             <field name="country_id" options="{'no_create_edit': True, 'no_create': True}"/>
                             <field name="country_code"/>
                             <field name="currency_id" options="{'no_create_edit': True, 'no_create': True}"/>
+                            <field name="night_limit"/>
                             <field name="config_id" column_invisible="True"/>
                             <field name="base_currency_id" column_invisible="True"/>
+                            <field name="diet_value"/>
                         </tree>
                     </field>
 
