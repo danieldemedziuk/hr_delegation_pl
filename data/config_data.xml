@@ -12,10 +12,12 @@
             <field name="moped_rate">0.42</field>
         </record>
 
+<!--        Country list-->
         <record id="international_rates_poland_data" model="hr_delegation_pl.international_rates">
             <field name="country_id">178</field>
             <field name="currency_id">17</field>
             <field name="diet_value">45</field>
+            <field name="night_limit">0</field>
             <field name="config_id">1</field>
         </record>
 
@@ -23,6 +25,7 @@
             <field name="country_id">57</field>
             <field name="currency_id">125</field>
             <field name="diet_value">49</field>
+            <field name="night_limit">170</field>
             <field name="config_id">1</field>
         </record>
 
@@ -30,6 +33,7 @@
             <field name="country_id">75</field>
             <field name="currency_id">125</field>
             <field name="diet_value">55</field>
+            <field name="night_limit">200</field>
             <field name="config_id">1</field>
         </record>
 
@@ -37,6 +41,7 @@
             <field name="country_id">56</field>
             <field name="currency_id">125</field>
             <field name="diet_value">41</field>
+            <field name="night_limit">120</field>
             <field name="config_id">1</field>
         </record>
 
@@ -44,6 +49,7 @@
             <field name="country_id">156</field>
             <field name="currency_id">1</field>
             <field name="diet_value">58</field>
+            <field name="night_limit">154</field>
             <field name="config_id">1</field>
         </record>
 
@@ -51,6 +57,7 @@
             <field name="country_id">233</field>
             <field name="currency_id">1</field>
             <field name="diet_value">59</field>
+            <field name="night_limit">200</field>
             <field name="config_id">1</field>
         </record>
 
@@ -58,6 +65,7 @@
             <field name="country_id">165</field>
             <field name="currency_id">125</field>
             <field name="diet_value">50</field>
+            <field name="night_limit">150</field>
             <field name="config_id">1</field>
         </record>
 
@@ -65,6 +73,7 @@
             <field name="country_id">132</field>
             <field name="currency_id">125</field>
             <field name="diet_value">45</field>
+            <field name="night_limit">150</field>
             <field name="config_id">1</field>
         </record>
 
@@ -72,6 +81,7 @@
             <field name="country_id">68</field>
             <field name="currency_id">125</field>
             <field name="diet_value">50</field>
+            <field name="night_limit">200</field>
             <field name="config_id">1</field>
         </record>
 
@@ -79,6 +89,7 @@
             <field name="country_id">20</field>
             <field name="currency_id">125</field>
             <field name="diet_value">55</field>
+            <field name="night_limit">200</field>
             <field name="config_id">1</field>
         </record>
 
@@ -86,13 +97,321 @@
             <field name="country_id">31</field>
             <field name="currency_id">125</field>
             <field name="diet_value">43</field>
+            <field name="night_limit">120</field>
             <field name="config_id">1</field>
         </record>
 
         <record id="international_rates_uk_data" model="hr_delegation_pl.international_rates">
             <field name="country_id">231</field>
             <field name="currency_id">143</field>
+            <field name="diet_value">45</field>
+            <field name="night_limit">220</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_argentina_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">10</field>
+            <field name="currency_id">1</field>
+            <field name="diet_value">50</field>
+            <field name="night_limit">150</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_armenia_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">7</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">42</field>
+            <field name="night_limit">145</field>
+            <field name="config_id">1</field>
+        </record>
+
+
+
+        <record id="international_rates_austria_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">12</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">57</field>
+            <field name="night_limit">150</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_belarus_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">36</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">42</field>
+            <field name="night_limit">130</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_bosnia_and_herzegovina_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">17</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">41</field>
+            <field name="night_limit">100</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_bulgaria_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">22</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">40</field>
+            <field name="night_limit">120</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_chile_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">46</field>
+            <field name="currency_id">1</field>
+            <field name="diet_value">60</field>
+            <field name="night_limit">120</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_china_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">48</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">55</field>
+            <field name="night_limit">170</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_croatia_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">97</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">42</field>
+            <field name="night_limit">125</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_cyprus_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">55</field>
+            <field name="currency_id">125</field>
             <field name="diet_value">43</field>
+            <field name="night_limit">160</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_montenegro_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">139</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">40</field>
+            <field name="night_limit">110</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_denmark_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">59</field>
+            <field name="currency_id">10</field>
+            <field name="diet_value">446</field>
+            <field name="night_limit">1430</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_egypt_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">65</field>
+            <field name="currency_id">1</field>
+            <field name="diet_value">55</field>
+            <field name="night_limit">150</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_estonia_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">64</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">45</field>
+            <field name="night_limit">110</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_finland_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">70</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">53</field>
+            <field name="night_limit">180</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_greece_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">88</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">50</field>
+            <field name="night_limit">160</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_georgia_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">78</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">48</field>
+            <field name="night_limit">160</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_ireland_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">101</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">52</field>
+            <field name="night_limit">160</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_iceland_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">108</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">56</field>
+            <field name="night_limit">160</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_israel_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">102</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">70</field>
+            <field name="night_limit">200</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_qatar_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">186</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">41</field>
+            <field name="night_limit">200</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_lithuania_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">132</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">45</field>
+            <field name="night_limit">150</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_luxembourg_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">133</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">55</field>
+            <field name="night_limit">200</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_latvia_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">134</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">56</field>
+            <field name="night_limit">132</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_malta_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">152</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">43</field>
+            <field name="night_limit">180</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_moldova_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">138</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">45</field>
+            <field name="night_limit">94</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_monaco_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">137</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">55</field>
+            <field name="night_limit">200</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_new_zealand_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">170</field>
+            <field name="currency_id">1</field>
+            <field name="diet_value">58</field>
+            <field name="night_limit">180</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_portugal_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">183</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">49</field>
+            <field name="night_limit">150</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_russia_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">190</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">48</field>
+            <field name="night_limit">200</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_romania_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">188</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">42</field>
+            <field name="night_limit">110</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_san_marino_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">203</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">53</field>
+            <field name="night_limit">192</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_serbia_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">189</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">40</field>
+            <field name="night_limit">110</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_slovakia_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">201</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">47</field>
+            <field name="night_limit">132</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_slovenia_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">199</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">45</field>
+            <field name="night_limit">143</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_turkey_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">224</field>
+            <field name="currency_id">1</field>
+            <field name="diet_value">53</field>
+            <field name="night_limit">185</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_hungary_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">99</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">44</field>
+            <field name="night_limit">143</field>
+            <field name="config_id">1</field>
+        </record>
+
+        <record id="international_rates_italy_data" model="hr_delegation_pl.international_rates">
+            <field name="country_id">109</field>
+            <field name="currency_id">125</field>
+            <field name="diet_value">53</field>
+            <field name="night_limit">192</field>
             <field name="config_id">1</field>
         </record>
 
