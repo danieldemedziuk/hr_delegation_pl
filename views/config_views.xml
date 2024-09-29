@@ -62,6 +62,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_config" name="Config" parent='hr_delegation_pl.menu_root' action='action_hr_delegation_config_view' sequence="20"/>
+    <menuitem id="menu_config" name="Config" parent='hr_delegation_pl.menu_config_config' action='action_hr_delegation_config_view' sequence="20"/>
 
 </odoo>

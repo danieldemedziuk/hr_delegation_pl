@@ -22,7 +22,10 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <field name="state" widget="statusbar"/>
+                    <button name="action_settle" string="Settle" type="object" invisible="state != 'new'"/>
+                    <button name="action_done" string="Done" type="object" invisible="state != 'in-progress'"/>
+                    <button name="action_cancel" string="Cancel" type="object" invisible="state not in ('in-progress')"/>
+                    <field name="state" widget="statusbar" statusbar_visible="new,in-progress"/>
                 </header>
                 <sheet>
                     <label for="name" class="oe_edit_only"/>
@@ -31,15 +34,101 @@
                     </h1>
                     <group>
                         <group>
-                            <field name="date_start"/>
-                            <field name="date_start"/>
+                            <field name="date_start" readonly="state not in ('draft', 'new')"/>
+                            <field name="date_end" readonly="state not in ('draft', 'new')"/>
                         </group>
                         <group>
-                            <field name="project_id"/>
-                            <field name="employee_id"/>
+                            <field name="project_id" readonly="state not in ('draft', 'new')"/>
+                            <field name="employee_id" readonly="state not in ('draft', 'new')"/>
                         </group>
                     </group>
-                    <field name="note"/>
+                    <label for="note" class="oe_edit_only"/>
+                    <field name="note" readonly="state not in ('draft', 'new')"/>
+                    <notebook invisible="state != 'in-progress'">
+                        <page string="General">
+                            <group col="2">
+                                <group>
+                                    <field name="vehicle_id"/>
+                                    <field name="private_vehicle_id"/>
+                                </group>
+                                <group>
+                                    <field name="need_hotel"/>
+                                    <field name="need_hotel"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Details">
+                            <group col="2">
+                                <group>
+                                    <field name="daily_returns"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Additional">
+
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="delegation_view_search" model="ir.ui.view">
+        <field name="name">hr_delegation_pl.search</field>
+        <field name="model">hr_delegation_pl</field>
+        <field name="arch" type="xml">
+            <search string="Parameters">
+                <field name="name" string="Name"/>
+                <field name="project_id" string="Project"/>
+                <field name="employee_id" string="Employee"/>
+                <field name="state" string="State"/>
+                <filter string="In progress" name="in-progress" domain="[('state','=','in-progress')]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter string="Project" name="project_id" domain="[]" context="{'group_by':'project_id'}"/>
+                    <filter string="Employee" name="employee_id" domain="[]" context="{'group_by':'employee_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_delegation_private_vehicle_tree_view" model="ir.ui.view">
+        <field name="name">HR Delegation Private Vehicle Tree view</field>
+        <field name="model">hr_delegation_pl.private_vehicle</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="brand_id"/>
+                <field name="model_id"/>
+                <field name="license_plate"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_delegation_private_vehicle_form_view" model="ir.ui.view">
+        <field name="name">HR Delegation Private Vehicle Form view</field>
+        <field name="model">hr_delegation_pl.private_vehicle</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <label for="name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="brand_id" options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+                            <field name="model_id"/>
+                        </group>
+                        <group>
+                            <field name="license_plate"/>
+                            <label for="engine_capacity"/>
+                            <div class="o_row">
+                                <field name="engine_capacity"/>
+                                <span>cm3</span>
+                            </div>
+                        </group>
+                    </group>
                 </sheet>
             </form>
         </field>
@@ -49,9 +138,34 @@
         <field name="name">Delegation</field>
         <field name="res_model">hr_delegation_pl</field>
         <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="delegation_view_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new delegation
+            </p>
+            <p>
+                Create as the first new delegation request for yourself or your employee.
+            </p>
+        </field>
     </record>
 
-    <menuitem id="menu_root" name="Delegation" sequence="1"/>
+    <record id="action_hr_delegation_private_vehicle_tree_view" model="ir.actions.act_window">
+        <field name="name">Private vehicle</field>
+        <field name="res_model">hr_delegation_pl.private_vehicle</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add your private car
+            </p>
+            <p>
+                You can add to the list your own private car, which you will use to travel on a business trip.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_root" name="Delegation" sequence="55"/>
     <menuitem id="menu_delegation_root" name="Delegation" action='action_hr_delegation_tree_view' parent='menu_root' sequence="5"/>
+    <menuitem id="menu_config_config" name="Configuration" parent='menu_root' sequence="10"/>
+    <menuitem id="menu_private_vehicle" name="Private vehicle" parent='menu_config_config' action='action_hr_delegation_private_vehicle_tree_view' sequence="10"/>
 
 </odoo>
